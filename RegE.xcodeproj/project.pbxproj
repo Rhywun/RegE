@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,12 @@
 		43675B7B2544901100108198 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43675B7A2544901100108198 /* Preview Assets.xcassets */; };
 		43675B872544901200108198 /* RegETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43675B862544901200108198 /* RegETests.swift */; };
 		43675B922544901200108198 /* RegEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43675B912544901200108198 /* RegEUITests.swift */; };
+		43675BCD2544947000108198 /* Guitar in Frameworks */ = {isa = PBXBuildFile; productRef = 43675BCC2544947000108198 /* Guitar */; };
+		43675BD82544D72700108198 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43675BD62544D72700108198 /* Data.swift */; };
+		43675BD92544D72700108198 /* RegexRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43675BD72544D72700108198 /* RegexRule.swift */; };
+		43675BDF2544D7FA00108198 /* help.json in Resources */ = {isa = PBXBuildFile; fileRef = 43675BDE2544D7FA00108198 /* help.json */; };
+		43675BE92544D83700108198 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43675BE72544D83700108198 /* RowView.swift */; };
+		43675BEA2544D83700108198 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43675BE82544D83700108198 /* HelpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +52,11 @@
 		43675B8D2544901200108198 /* RegEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RegEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43675B912544901200108198 /* RegEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegEUITests.swift; sourceTree = "<group>"; };
 		43675B932544901200108198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43675BD62544D72700108198 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		43675BD72544D72700108198 /* RegexRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexRule.swift; sourceTree = "<group>"; };
+		43675BDE2544D7FA00108198 /* help.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = help.json; sourceTree = "<group>"; };
+		43675BE72544D83700108198 /* RowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
+		43675BE82544D83700108198 /* HelpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43675BCD2544947000108198 /* Guitar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,12 +108,14 @@
 		43675B722544901100108198 /* RegE */ = {
 			isa = PBXGroup;
 			children = (
-				43675B732544901100108198 /* RegEApp.swift */,
-				43675B752544901100108198 /* ContentView.swift */,
-				43675B772544901100108198 /* Assets.xcassets */,
-				43675B7C2544901100108198 /* Info.plist */,
-				43675B7D2544901100108198 /* RegE.entitlements */,
+				43675BD52544D71200108198 /* Models */,
 				43675B792544901100108198 /* Preview Content */,
+				43675BDD2544D7EB00108198 /* Resources */,
+				43675BE32544D82100108198 /* Views */,
+				43675B772544901100108198 /* Assets.xcassets */,
+				43675B7D2544901100108198 /* RegE.entitlements */,
+				43675B732544901100108198 /* RegEApp.swift */,
+				43675B7C2544901100108198 /* Info.plist */,
 			);
 			path = RegE;
 			sourceTree = "<group>";
@@ -117,8 +131,8 @@
 		43675B852544901200108198 /* RegETests */ = {
 			isa = PBXGroup;
 			children = (
-				43675B862544901200108198 /* RegETests.swift */,
 				43675B882544901200108198 /* Info.plist */,
+				43675B862544901200108198 /* RegETests.swift */,
 			);
 			path = RegETests;
 			sourceTree = "<group>";
@@ -126,10 +140,37 @@
 		43675B902544901200108198 /* RegEUITests */ = {
 			isa = PBXGroup;
 			children = (
-				43675B912544901200108198 /* RegEUITests.swift */,
 				43675B932544901200108198 /* Info.plist */,
+				43675B912544901200108198 /* RegEUITests.swift */,
 			);
 			path = RegEUITests;
+			sourceTree = "<group>";
+		};
+		43675BD52544D71200108198 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				43675BD62544D72700108198 /* Data.swift */,
+				43675BD72544D72700108198 /* RegexRule.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		43675BDD2544D7EB00108198 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				43675BDE2544D7FA00108198 /* help.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		43675BE32544D82100108198 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				43675B752544901100108198 /* ContentView.swift */,
+				43675BE82544D83700108198 /* HelpView.swift */,
+				43675BE72544D83700108198 /* RowView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,12 +183,16 @@
 				43675B6C2544901100108198 /* Sources */,
 				43675B6D2544901100108198 /* Frameworks */,
 				43675B6E2544901100108198 /* Resources */,
+				43675BD12544A43E00108198 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = RegE;
+			packageProductDependencies = (
+				43675BCC2544947000108198 /* Guitar */,
+			);
 			productName = RegE;
 			productReference = 43675B702544901100108198 /* RegE.app */;
 			productType = "com.apple.product-type.application";
@@ -211,7 +256,7 @@
 				};
 			};
 			buildConfigurationList = 43675B6B2544901100108198 /* Build configuration list for PBXProject "RegE" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -219,6 +264,9 @@
 				Base,
 			);
 			mainGroup = 43675B672544901100108198;
+			packageReferences = (
+				43675BCB2544947000108198 /* XCRemoteSwiftPackageReference "Guitar" */,
+			);
 			productRefGroup = 43675B712544901100108198 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -236,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43675B7B2544901100108198 /* Preview Assets.xcassets in Resources */,
+				43675BDF2544D7FA00108198 /* help.json in Resources */,
 				43675B782544901100108198 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,12 +305,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		43675BD12544A43E00108198 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		43675B6C2544901100108198 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				43675B762544901100108198 /* ContentView.swift in Sources */,
+				43675BEA2544D83700108198 /* HelpView.swift in Sources */,
+				43675BE92544D83700108198 /* RowView.swift in Sources */,
+				43675BD92544D72700108198 /* RegexRule.swift in Sources */,
+				43675BD82544D72700108198 /* Data.swift in Sources */,
 				43675B742544901100108198 /* RegEApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -585,6 +658,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		43675BCB2544947000108198 /* XCRemoteSwiftPackageReference "Guitar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ArtSabintsev/Guitar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		43675BCC2544947000108198 /* Guitar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43675BCB2544947000108198 /* XCRemoteSwiftPackageReference "Guitar" */;
+			productName = Guitar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 43675B682544901100108198 /* Project object */;
 }

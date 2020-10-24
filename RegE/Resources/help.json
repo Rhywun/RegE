@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "description": "A single character of: a, b or c",
+    "pattern": "[abc]"
+  },
+  {
+    "id": 2,
+    "description": "A character except: a, b or c",
+    "pattern": "[^abc]"
+  },
+  {
+    "id": 3,
+    "description": "A character in the range: a-z",
+    "pattern": "[a-z]"
+  },
+  {
+    "id": 4,
+    "description": "A character not in the range: a-z",
+    "pattern": "[^a-z]"
+  },
+  {
+    "id": 5,
+    "description": "A character in the range: a-z or A-Z",
+    "pattern": "[a-zA-Z]"
+  },
+  {
+    "id": 6,
+    "description": "Any single character",
+    "pattern": "."
+  },
+  {
+    "id": 7,
+    "description": "Any whitespace character",
+    "pattern": "s"
+  },
+  {
+    "id": 8,
+    "description": "Any non-whitespace character",
+    "pattern": "S"
+  },
+  {
+    "id": 9,
+    "description": "Any digit",
+    "pattern": "d"
+  },
+  {
+    "id": 10,
+    "description": "Any non-digit",
+    "pattern": "D"
+  },
+  {
+    "id": 11,
+    "description": "Any word character",
+    "pattern": "w"
+  },
+  {
+    "id": 12,
+    "description": "Any non-word character",
+    "pattern": "W"
+  },
+  {
+    "id": 13,
+    "description": "Capture everything enclosed",
+    "pattern": "(...)"
+  },
+  {
+    "id": 14,
+    "description": "Match either a or b",
+    "pattern": "(a|b)"
+  },
+  {
+    "id": 15,
+    "description": "Zero or one of a",
+    "pattern": "a?"
+  },
+  {
+    "id": 16,
+    "description": "Zero or more of a",
+    "pattern": "a*"
+  },
+  {
+    "id": 17,
+    "description": "One or more of a",
+    "pattern": "a+"
+  },
+  {
+    "id": 18,
+    "description": "Exactly 3 of a",
+    "pattern": "a{3}"
+  },
+  {
+    "id": 19,
+    "description": "3 or more of a",
+    "pattern": "a{3,}"
+  },
+  {
+    "id": 20,
+    "description": "Between 3 and 6 of a",
+    "pattern": "a{3,6}"
+  },
+  {
+    "id": 21,
+    "description": "Start of string",
+    "pattern": "^"
+  },
+  {
+    "id": 22,
+    "description": "End of string",
+    "pattern": "$"
+  },
+  {
+    "id": 23,
+    "description": "A word boundary",
+    "pattern": "\b"
+  },
+  {
+    "id": 24,
+    "description": "Non-word boundary",
+    "pattern": "B"
+  }
+]
