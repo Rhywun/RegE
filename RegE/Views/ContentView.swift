@@ -11,19 +11,22 @@ import Guitar
 struct ContentView: View {
     @State var regText: String = ""
     @State var byRow: Bool = false
-    @State var inputText: String = ""
-    @State var outputText: String = ""
+    @State var inputText: String = "Enter text to search here"
+    @State var outputText: String = "Matches are shown here"
     @State var showHelp: Bool = false
 
     var body: some View {
         GeometryReader { geometry in
             HStack {
                 HSplitView {
+                    // TODO: Add placeholders to texteditors if Apple adds support
                     TextEditor(text: $inputText)
+                        .font(.system(.title, design: .monospaced))
                         .onChange(of: inputText) {
                             showMatches(for: $0)
                         }
                     TextEditor(text: $outputText)
+                        .font(.system(.title, design: .monospaced))
                 }
                 if showHelp {
                     HelpView().frame(width: 300)
@@ -42,7 +45,7 @@ struct ContentView: View {
                 ToolbarItem {
                     // TODO: Button should be attached to the right edge - how?
                     Button {
-                        withAnimation {
+                        withAnimation(.easeInOut(duration: 0.25)) {
                             showHelp.toggle()
                         }
                     } label: {
