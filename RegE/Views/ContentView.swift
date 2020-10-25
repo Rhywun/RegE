@@ -7,13 +7,14 @@
 
 import SwiftUI
 import Guitar
+import Introspect
 
 struct ContentView: View {
-    @State var regText: String = ""
-    @State var byRow: Bool = false
-    @State var inputText: String = "Enter text to search here"
-    @State var outputText: String = "Matches are shown here"
-    @State var showHelp: Bool = false
+    @State private var regText: String = ""
+    @State private var byRow: Bool = false
+    @State private var inputText: String = "Enter text to search here"
+    @State private var outputText: String = "Matches are shown here"
+    @State private var showHelp: Bool = false
 
     var body: some View {
         GeometryReader { geometry in
@@ -21,12 +22,12 @@ struct ContentView: View {
                 HSplitView {
                     // TODO: Add placeholders to texteditors if Apple adds support
                     TextEditor(text: $inputText)
-                        .font(.system(.title, design: .monospaced))
+                        .font(.system(.title2, design: .monospaced))
                         .onChange(of: inputText) {
                             showMatches(for: $0)
                         }
                     TextEditor(text: $outputText)
-                        .font(.system(.title, design: .monospaced))
+                        .font(.system(.title2, design: .monospaced))
                 }
                 if showHelp {
                     HelpView().frame(width: 300)
@@ -40,6 +41,9 @@ struct ContentView: View {
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .onChange(of: regText) {
                             showMatches(for: $0)
+                        }
+                        .introspectTextField { textField in
+                            textField.becomeFirstResponder()
                         }
                 }
                 ToolbarItem {
