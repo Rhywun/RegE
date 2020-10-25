@@ -55,6 +55,7 @@ struct ContentView: View {
                     } label: {
                         Image(systemName: "questionmark.circle")
                     }
+                    .help(Text("Help on Regular Expressions"))
                 }
             }
         }
