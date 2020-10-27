@@ -58,6 +58,7 @@
 		43675BDE2544D7FA00108198 /* help.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = help.json; sourceTree = "<group>"; };
 		43675BE72544D83700108198 /* RowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 		43675BE82544D83700108198 /* HelpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
+		43EF91BC2546E78300063739 /* Scratch.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Scratch.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +91,7 @@
 		43675B672544901100108198 = {
 			isa = PBXGroup;
 			children = (
+				43EF91BC2546E78300063739 /* Scratch.playground */,
 				43675B722544901100108198 /* RegE */,
 				43675B852544901200108198 /* RegETests */,
 				43675B902544901200108198 /* RegEUITests */,
